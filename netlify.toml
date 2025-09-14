@@ -1,5 +1,5 @@
 [build]
-  command = "pnpm build"
+  command = "pnpm install && pnpm build"
   publish = "dist"
 
 [[redirects]]
@@ -14,3 +14,10 @@
   NODE_ENV = "production"
   NODE_VERSION = "18"
   NPM_VERSION = "10"
+  PNPM_VERSION = "8.15.6"
+
+[build.cache]
+  paths = [
+    "node_modules/**/*",
+    ".pnpm-store/**/*"
+  ]
