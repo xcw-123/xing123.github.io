@@ -1,7 +1,6 @@
 [build]
   command = "pnpm build"
   publish = "dist"
-  environment = { NODE_ENV = "production" }
 
 [[redirects]]
   from = "/*"
@@ -12,5 +11,6 @@
   skip = false
 
 [build.environment]
+  NODE_ENV = "production"
   NODE_VERSION = "18"
   NPM_VERSION = "10"
