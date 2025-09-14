@@ -1,11 +1,15 @@
 [build]
   command = "pnpm build"
   publish = "dist"
+  environment = { NODE_ENV = "production" }
 
 [[redirects]]
   from = "/*"
   to = "/index.html"
   status = 200
+
+[build.processing]
+  skip = false
 
 [build.environment]
   NODE_VERSION = "18"
